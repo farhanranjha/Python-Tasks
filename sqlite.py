@@ -4,9 +4,6 @@ import pandas as pd
 
 con = sqlite3.connect('Task.db')
 
-sql_query = "select * from Items"
-cursor = con.cursor()
-
 df = pd.read_sql_query("SELECT * from Items", con)
 
 for index, row in df.iterrows():
